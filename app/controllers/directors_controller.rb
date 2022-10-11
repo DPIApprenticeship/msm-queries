@@ -18,4 +18,12 @@ class DirectorsController < ApplicationController
     @dob = @director.dob.strftime("%B %d, %Y")
     render({ :template => "director_templates/youngest.html.erb"})
   end
+
+  def director_info
+    @id = params.fetch(:id)
+    @director = Director.where({ :id => @id}).at(0)
+
+    @filmography = Movie.where({ :director_id => @id })
+    render({ :template => "director_templates/director.html.erb"})
+  end
 end
