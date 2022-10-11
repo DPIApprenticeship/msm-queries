@@ -1,0 +1,15 @@
+<h1>Directors</h1>
+
+<table border="1">
+<% @list_of_directors.each do |director| %>
+    <tr>
+        <td><%= director.id %></td>
+        <td>
+            <img src="http://robohash.org/<%= director.image %>">
+        </td>
+        <td><%= director.name %></td>
+        <td><%= director.dob %></td>
+        <td><a href="/directors/<%= director.id %>">Show details</a></td>
+    </tr>
+<% end %>
+</table>
