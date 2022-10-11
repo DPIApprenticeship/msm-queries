@@ -12,7 +12,7 @@
   <% @movies.each do |film| %>
     <tr>
       <td><%= film.id %></td>
-      <td><img src="<%= film.image %>"></td>
+      <td><img src="<%= film.image %>" width=200></td>
       <td><%= film.title %></td>
       <td><%= film.year %></td>
       <td><%= Director.where({ :id => film.director_id }).at(0).name %></td>
@@ -20,3 +20,18 @@
     </tr>
   <% end %>
 </table>
+
+<h2>Add a Movie</h2>
+<form>
+  <div>
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title">
+  </div>
+
+  <div>
+    <label for="year">Year</label>
+    <input type="text" id="year" name="year">
+  </div>
+
+  <button>Add movie</button>
+</form>

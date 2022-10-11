@@ -1,5 +1,8 @@
 <h1>Movie #<%= @id %> details</h1>
 
+<a href="/movies">Go back</a> | <a href="/delete_movie/<%= @id %>">Delete Movie</a>
+<hr>
+
 <dl>
   <dt>Title</dt>
   <dd><%= @movie.title %></dd>
