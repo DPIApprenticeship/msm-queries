@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.all.order("title")
+    @directors = Director.all.order("name")
 
     render({ :template => "movie_templates/index.html.erb"})
   end
@@ -11,6 +12,8 @@ class MoviesController < ApplicationController
     @director = Director.where({ :id => @movie.director_id}).at(0).name
     render({ :template => "movie_templates/movie.html.erb"})
   end
+
+
 
   def delete
       @id = params.fetch(:id)

@@ -33,5 +33,29 @@
     <input type="text" id="year" name="year">
   </div>
 
+  <div>
+    <label for="duration">Duration</label>
+    <input type="text" id="duration" name="duration">
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <textarea id="description" name="description"></textarea>
+  </div>
+
+  <div>
+    <label for="image_url">Image URL</label>
+    <input type="text" id="image_url" name="image_url">
+  </div>
+
+  <div>
+    <label for="director_id">Director</label>
+    <select id="director_id" name="director_id">
+      <% @directors.each do |director| %>
+        <option value=<%= director.id %>><%= director.name %></option>
+      <% end %>
+    </select>
+  </div>
+
   <button>Add movie</button>
 </form>
