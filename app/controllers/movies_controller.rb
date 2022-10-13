@@ -18,7 +18,9 @@ class MoviesController < ApplicationController
   def delete
       @id = params.fetch(:id)
       @movie = Movie.where({ :id => @id}).at(0)
-      @movie.destroy
+      if (@movie)
+        @movie.destroy
+      end
 
       index
   end
