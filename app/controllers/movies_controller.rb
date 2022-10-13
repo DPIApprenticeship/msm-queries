@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all.order("title")
-    @directors = Director.all.order("name")
+    @movies = Movie.all.order(:title)
+    @directors = Director.all.order(:name)
 
     render({ :template => "movie_templates/index.html.erb"})
   end
