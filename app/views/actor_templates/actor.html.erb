@@ -16,10 +16,10 @@
   <dd><img src="<%= @actor.image %>"></dd>
 
   <dt>Created at</dt>
-  <dd><%= @actor.created_at %></dd>
+  <dd><%= time_ago_in_words(@actor.created_at) %></dd>
 
   <dt>Updated at</dt>
-  <dt><%= @actor.updated_at %></dd>
+  <dt><%= time_ago_in_words(@actor.updated_at) %></dd>
 </dl>
 
 <hr>

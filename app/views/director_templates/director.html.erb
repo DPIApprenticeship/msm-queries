@@ -19,10 +19,10 @@
   <dd><img src="http://robohash.org/<%= @director.image %>"></dd>
 
   <dt>Created at</dt>
-  <dd><%= @director.created_at %></dd>
+  <dd><%= time_ago_in_words(@director.created_at) %></dd>
 
   <dt>Updated at</dt>
-  <dd><%= @director.updated_at %></dd>
+  <dd><%= time_ago_in_words(@director.updated_at) %></dd>
 </dl>
 
 <hr>

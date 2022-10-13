@@ -23,10 +23,10 @@
   <dd><%= @director %></dd>
 
   <dt>Created at</dt>
-  <dd><%= @movie.created_at %></dd>
+  <dd><%= time_ago_in_words(@movie.created_at) %></dd>
 
   <dt>Updated at</dt>
-  <dd><%= @movie.updated_at %></dd>
+  <dd><%= time_ago_in_words(@movie.updated_at) %></dd>
 </dl>
 
 <hr>
